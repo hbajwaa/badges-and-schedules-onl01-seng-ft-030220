@@ -14,12 +14,14 @@ end
 #--------------------
 def assign_rooms(array)
   room_number = 1
+  assigned= []
   
   array.each do |speaker|
-    return "Hello, #{speaker}!You'll be assigned to room #{room_number}"
+    assigned.push("Hello, #{speaker}!You'll be assigned to room #{room_number}")
     room_number += 1
   end
-  
+  return assigned
+
 end  
 #--------------------
 def printer
