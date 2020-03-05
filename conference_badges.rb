@@ -4,12 +4,15 @@ end
 
 
 
+
 def batch_badge_creator(array)
-  nuarray = []
+  batch_messages = []
+  
   array.each do |name|
-    nuarray.push("Hello, my name is #{name}.")
+    batch_messages.push("Hello, my name is #{name}.")
   end
-  return nuarray
+  
+  return batch_messages
 end
 
 
@@ -17,24 +20,27 @@ end
 
 
 def assign_rooms(array)
-  nuarray = []
+  assigned = []
   counter = 1
+  
   array.each do |name|
-    nuarray.push("Hello, #{name}! You'll be assigned to room #{counter}!")
+    assigned.push("Hello, #{name}! You'll be assigned to room #{counter}!")
     counter += 1
   end
-  return nuarray
+  
+  return assigned
 end
 
 
 
+
 def printer(array)
-  batch_badge_creator(array).each do |id|
-    puts id
+  batch_badge_creator(array).each do |element|
+    puts element
   end 
   
-  assign_rooms(array).each do |id|
-    puts id 
+  assign_rooms(array).each do |element|
+    puts element
   end
 end 
 
